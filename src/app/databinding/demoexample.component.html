@@ -1,0 +1,11 @@
+<h1> Demo Example</h1>
+<hr>
+
+<div>
+  <img [src]="clickedCartoon" alt="codekul.com"/>
+</div>
+<div>
+  <input type="button" value="Mickey Mouse" (click)="onCartoonClicked('mickey')"/>
+  <input type="button" value="Goofy" (click)="onCartoonClicked('goofey')"/>
+  <input type="button" value="Tom And Jerry" (click)="onCartoonClicked('tj')"/>
+</div>
