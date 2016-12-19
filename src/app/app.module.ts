@@ -11,6 +11,9 @@ import { PropertybindingComponent } from './databinding/propertybinding.componen
 import { EventbindingComponent } from './databinding/eventbinding.component';
 import { TwowaybindingComponent } from './databinding/twowaybinding.component';
 import { DemoexampleComponent } from './databinding/demoexample.component';
+import { IntercompcommComponent } from './intercompcomm/intercompcomm.component';
+import { BtnpannelComponent } from './intercompcomm/btnpannel.component';
+import { ImgpannelComponent } from './intercompcomm/imgpannel.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +24,10 @@ import { DemoexampleComponent } from './databinding/demoexample.component';
     PropertybindingComponent,
     EventbindingComponent,
     TwowaybindingComponent,
-    DemoexampleComponent
+    DemoexampleComponent,
+    IntercompcommComponent,
+    BtnpannelComponent,
+    ImgpannelComponent
   ],
   imports: [
     BrowserModule,
