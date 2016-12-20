@@ -14,6 +14,10 @@ import { DemoexampleComponent } from './databinding/demoexample.component';
 import { IntercompcommComponent } from './intercompcomm/intercompcomm.component';
 import { BtnpannelComponent } from './intercompcomm/btnpannel.component';
 import { ImgpannelComponent } from './intercompcomm/imgpannel.component';
+import { ProjectionsComponent } from './projections/projections.component';
+import { LifecycleComponent } from './lifecycle/lifecycle.component';
+import { ProjectionindexComponent } from './projections/projectionindex.component';
+import { LifecycleindexComponent } from './lifecycle/lifecycleindex.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +31,11 @@ import { ImgpannelComponent } from './intercompcomm/imgpannel.component';
     DemoexampleComponent,
     IntercompcommComponent,
     BtnpannelComponent,
-    ImgpannelComponent
+    ImgpannelComponent,
+    ProjectionsComponent,
+    LifecycleComponent,
+    ProjectionindexComponent,
+    LifecycleindexComponent
   ],
   imports: [
     BrowserModule,
