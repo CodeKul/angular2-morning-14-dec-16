@@ -18,6 +18,11 @@ import { ProjectionsComponent } from './projections/projections.component';
 import { LifecycleComponent } from './lifecycle/lifecycle.component';
 import { ProjectionindexComponent } from './projections/projectionindex.component';
 import { LifecycleindexComponent } from './lifecycle/lifecycleindex.component';
+import { Projectmod1Component } from './projectmod1/projectmod1.component';
+import { HeaderComponent } from './projectmod1/header.component';
+import { LeftmenuComponent } from './projectmod1/leftmenu.component';
+import { MaincontentComponent } from './projectmod1/maincontent.component';
+import { ProjindexComponent } from './projectmod1/projindex.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +40,12 @@ import { LifecycleindexComponent } from './lifecycle/lifecycleindex.component';
     ProjectionsComponent,
     LifecycleComponent,
     ProjectionindexComponent,
-    LifecycleindexComponent
+    LifecycleindexComponent,
+    Projectmod1Component,
+    HeaderComponent,
+    LeftmenuComponent,
+    MaincontentComponent,
+    ProjindexComponent
   ],
   imports: [
     BrowserModule,

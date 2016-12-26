@@ -1,0 +1,7 @@
+<div class="col-sm-3 col-md-2 sidebar">
+  <ul class="nav nav-sidebar">
+    <li *ngFor="let menu of menus">
+      <a href="#" (click)="onLeftMenuClicked(menu)">{{menu.name}}<span class="sr-only">(current)</span></a>
+    </li>
+  </ul>
+</div>
