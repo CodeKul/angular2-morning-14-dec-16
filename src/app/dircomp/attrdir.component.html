@@ -1,0 +1,104 @@
+<h1>Attribute Directive</h1>
+<hr>
+
+<div>
+  <h2>ngClass</h2>
+</div>
+<div [ngStyle]="{'width' : '100px', 'height':'100px', 'border' : '1px solid red'}">
+  hi
+</div>
+
+<div [ngClass]="{myDiv : true}">
+  hi
+</div>
+
+<div [ngClass]="{myDiv : true}" [style.border]="'2px solid green'">
+  hi
+</div>
+
+<h1>Custom Attribute Directive</h1>
+<hr>
+
+<div>
+  <!--<input type="text" resizer [sizeEl]="300"/> -->
+  <input type="text" [resizer]="300" />
+</div>
+
+<div>
+  <input type="text" [resizer]="100" />
+</div>
+
+<h1>Structural Directive</h1>
+<hr>
+<div>
+  <h2>*ngFor</h2>
+</div>
+<div>
+  <ul>
+    <li *ngFor="let item of ['India','Chiana','Japan','Sri Lanka','Us']"><a href="#">{{item}}</a></li>
+  </ul>
+</div>
+
+<div>
+  <h2>*ngIf</h2>
+
+  <div *ngIf="isTrue">
+    yes it is true
+  </div>
+  <div>
+    <input type="button" (click)="isTrue = !isTrue" value="Okay" />
+  </div>
+</div>
+
+<div>
+  <h2>*ngSwitch</h2>
+
+  <div [ngSwitch]="day">
+    <div *ngSwitchCase="1">
+      It is Sunday
+    </div>
+    <div *ngSwitchCase="2">
+      It is Monday
+    </div>
+    <div *ngSwitchCase="3">
+      It is Tuesday
+    </div>
+    <div *ngSwitchDefault>
+      It is Unknown
+    </div>
+  </div>
+  <div>
+    <input type="button" (click)=" day = 1" value="One" />
+    <input type="button" (click)=" day = 2" value="Two" />
+    <input type="button" (click)=" day = 3" value="Three" />
+  </div>
+</div>
+
+<div>
+  <h2>template [ngIf]</h2>
+
+  <template [ngIf]="isTrue">
+    <div>
+      yes it is true
+    </div>
+  </template>
+
+  <div>
+    <input type="button" (click)="isTrue = !isTrue" value="Okay" />
+  </div>
+</div>
+
+<div>
+  <h2> Own Structural Directive </h2>
+
+  <div *ownStr="2">
+    Yes it is one
+  </div>
+
+  <template [ownStr]="2">
+   <div>
+     Yes it is one
+   </div> 
+  </template>
+</div>
+

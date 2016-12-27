@@ -1,0 +1,23 @@
+var i = 10;
+
+var arr = [
+    'India',
+    'Japan',
+    'US',
+    'UK'
+];
+
+var obj = {
+    name : 'Android',
+    os : 'JB',
+    ver : 4.1,
+    isUpdateAva : true,
+    allVersions : {
+        base : 1.0,
+        cupCake : 2.0
+    },
+    devices : [
+        {mobile : 'HTC', cost : 5000},
+        {mobile : 'Samsung',cost : 8000}
+    ]
+};

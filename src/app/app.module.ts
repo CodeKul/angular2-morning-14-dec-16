@@ -23,6 +23,11 @@ import { HeaderComponent } from './projectmod1/header.component';
 import { LeftmenuComponent } from './projectmod1/leftmenu.component';
 import { MaincontentComponent } from './projectmod1/maincontent.component';
 import { ProjindexComponent } from './projectmod1/projindex.component';
+import { DircompComponent } from './dircomp/dircomp.component';
+import { AttrdirComponent } from './dircomp/attrdir.component';
+import { ResizerDirective } from './dircomp/resizer.directive';
+import { OwnstrDirective } from './dircomp/ownstr.directive';
+import { DropdownDirective } from './projectmod1/dropdown.directive';
 
 @NgModule({
   declarations: [
@@ -45,7 +50,12 @@ import { ProjindexComponent } from './projectmod1/projindex.component';
     HeaderComponent,
     LeftmenuComponent,
     MaincontentComponent,
-    ProjindexComponent
+    ProjindexComponent,
+    DircompComponent,
+    AttrdirComponent,
+    ResizerDirective,
+    OwnstrDirective,
+    DropdownDirective
   ],
   imports: [
     BrowserModule,
