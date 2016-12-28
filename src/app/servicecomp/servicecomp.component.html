@@ -1,0 +1,16 @@
+<h1>Services / Providers</h1>
+<hr>
+<div>
+  <ul>
+    <li *ngFor="let city of citiesOne">{{city}}</li>
+  </ul>
+  <div>
+    <input type="text" #cityOne/> <input type="button" value="okay" (click)="addNewCityOne(cityOne.value)">
+  </div>
+</div>
+
+<div>
+  <input type="button" value="red" (click)="onColorClick('red')">
+  <input type="button" value="green" (click)="onColorClick('green')">
+  <input type="button" value="blue" (click)="onColorClick('blue')">
+</div>

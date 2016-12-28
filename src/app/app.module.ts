@@ -1,3 +1,5 @@
+import { BridgeService } from './servicecomp/bridge.service';
+import { FirstService } from './servicecomp/first.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -28,6 +30,9 @@ import { AttrdirComponent } from './dircomp/attrdir.component';
 import { ResizerDirective } from './dircomp/resizer.directive';
 import { OwnstrDirective } from './dircomp/ownstr.directive';
 import { DropdownDirective } from './projectmod1/dropdown.directive';
+import { ServicecompComponent } from './servicecomp/servicecomp.component';
+import { ServiceindexComponent } from './servicecomp/serviceindex.component';
+import { ImpcompComponent } from './servicecomp/impcomp.component';
 
 @NgModule({
   declarations: [
@@ -55,14 +60,17 @@ import { DropdownDirective } from './projectmod1/dropdown.directive';
     AttrdirComponent,
     ResizerDirective,
     OwnstrDirective,
-    DropdownDirective
+    DropdownDirective,
+    ServicecompComponent,
+    ServiceindexComponent,
+    ImpcompComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [FirstService,BridgeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
