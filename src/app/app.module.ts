@@ -1,3 +1,4 @@
+import { routeModule } from './app.routing';
 import { BridgeService } from './servicecomp/bridge.service';
 import { FirstService } from './servicecomp/first.service';
 import { BrowserModule } from '@angular/platform-browser';
@@ -33,6 +34,9 @@ import { DropdownDirective } from './projectmod1/dropdown.directive';
 import { ServicecompComponent } from './servicecomp/servicecomp.component';
 import { ServiceindexComponent } from './servicecomp/serviceindex.component';
 import { ImpcompComponent } from './servicecomp/impcomp.component';
+import { RoutingComponent } from './routing/routing.component';
+import { LoginrComponent } from './routing/loginr.component';
+import { RegisterrComponent } from './routing/registerr.component';
 
 @NgModule({
   declarations: [
@@ -63,12 +67,16 @@ import { ImpcompComponent } from './servicecomp/impcomp.component';
     DropdownDirective,
     ServicecompComponent,
     ServiceindexComponent,
-    ImpcompComponent
+    ImpcompComponent,
+    RoutingComponent,
+    LoginrComponent,
+    RegisterrComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    routeModule
   ],
   providers: [FirstService,BridgeService],
   bootstrap: [AppComponent]
