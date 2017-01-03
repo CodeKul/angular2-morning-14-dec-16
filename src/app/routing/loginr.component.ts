@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-loginr',
@@ -7,9 +9,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginrComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router : Router) { 
+  }
 
   ngOnInit() {
   }
 
+  public doLogin(userName : string, password : string) : any | boolean {
+    let status = true;
+
+    if(userName == 'android' && password == 'android') {
+      status = false;
+      this.router.navigate(['proj',userName]);
+    } 
+    return status;
+  }
 }

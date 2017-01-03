@@ -37,6 +37,7 @@ import { ImpcompComponent } from './servicecomp/impcomp.component';
 import { RoutingComponent } from './routing/routing.component';
 import { LoginrComponent } from './routing/loginr.component';
 import { RegisterrComponent } from './routing/registerr.component';
+import { RouterindexComponent } from './routing/routerindex.component';
 
 @NgModule({
   declarations: [
@@ -70,7 +71,8 @@ import { RegisterrComponent } from './routing/registerr.component';
     ImpcompComponent,
     RoutingComponent,
     LoginrComponent,
-    RegisterrComponent
+    RegisterrComponent,
+    RouterindexComponent
   ],
   imports: [
     BrowserModule,
