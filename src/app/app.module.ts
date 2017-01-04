@@ -1,3 +1,4 @@
+import { WallGuardService } from './projectmod1/wall-guard.service';
 import { routeModule } from './app.routing';
 import { BridgeService } from './servicecomp/bridge.service';
 import { FirstService } from './servicecomp/first.service';
@@ -38,6 +39,8 @@ import { RoutingComponent } from './routing/routing.component';
 import { LoginrComponent } from './routing/loginr.component';
 import { RegisterrComponent } from './routing/registerr.component';
 import { RouterindexComponent } from './routing/routerindex.component';
+import { BasicInfoComponent } from './projectmod1/basic-info.component';
+import { WallComponent } from './projectmod1/wall.component';
 
 @NgModule({
   declarations: [
@@ -72,7 +75,9 @@ import { RouterindexComponent } from './routing/routerindex.component';
     RoutingComponent,
     LoginrComponent,
     RegisterrComponent,
-    RouterindexComponent
+    RouterindexComponent,
+    BasicInfoComponent,
+    WallComponent
   ],
   imports: [
     BrowserModule,
@@ -80,7 +85,7 @@ import { RouterindexComponent } from './routing/routerindex.component';
     HttpModule,
     routeModule
   ],
-  providers: [FirstService,BridgeService],
+  providers: [FirstService,BridgeService,WallGuardService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

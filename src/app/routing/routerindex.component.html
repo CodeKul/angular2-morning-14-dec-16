@@ -1,9 +1,9 @@
 <router-outlet></router-outlet>
 
 <div>
-    <input type="text" [(ngModel)]="user"/> <a [routerLink]="['proj',user]" [queryParams]="{firstName : 'android',email :'ani@gmail.com',password :'hhhhh'}">Project</a>
+    <input type="text" [(ngModel)]="user"/> <a [routerLink]="['proj',user]" [queryParams]="{firstName : 'android',email :'ani@gmail.com',password :'hhhhh'}" routerLinkActive="active">Project</a>
 </div>
 
 <div>
-    <a routerLink="register">Register</a>
+    <a routerLink="register" routerLinkActive="active">Register</a>
 </div>
