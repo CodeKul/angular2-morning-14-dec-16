@@ -1,3 +1,5 @@
+import { DataDrivenComponent } from './forms/data-driven.component';
+import { TempDrivenComponent } from './forms/temp-driven.component';
 import { WallGuardService } from './projectmod1/wall-guard.service';
 import { BasicInfoComponent } from './projectmod1/basic-info.component';
 import { WallComponent } from './projectmod1/wall.component';
@@ -15,13 +17,15 @@ const CHILD_PROJ: Routes = [
 ];
 
 const ROUTING_PATH: Routes = [
+    {path:'templateDriven', component : TempDrivenComponent},
+    {path:'dataDriven', component : DataDrivenComponent},
     { path: '', component: LoginrComponent },
     { path: 'proj/:userName', component: HeaderComponent, canActivate : [WallGuardService] },
     { path: 'proj/:userName', component: HeaderComponent, children: CHILD_PROJ },
     { path: 'register', component: RegisterrComponent },
     { path: 'sample', component: MyFirstCompComponent },
     { path: 'proj', redirectTo: 'proj/android' },
-    { path: '**', redirectTo: 'proj/android/info' }
+    { path: '**', redirectTo: 'proj/android/info' },
 ];
 
 export const routeModule = RouterModule.forRoot(ROUTING_PATH); 

@@ -41,6 +41,9 @@ import { RegisterrComponent } from './routing/registerr.component';
 import { RouterindexComponent } from './routing/routerindex.component';
 import { BasicInfoComponent } from './projectmod1/basic-info.component';
 import { WallComponent } from './projectmod1/wall.component';
+import { FormsComponent } from './forms/forms.component';
+import { TempDrivenComponent } from './forms/temp-driven.component';
+import { DataDrivenComponent } from './forms/data-driven.component';
 
 @NgModule({
   declarations: [
@@ -77,7 +80,10 @@ import { WallComponent } from './projectmod1/wall.component';
     RegisterrComponent,
     RouterindexComponent,
     BasicInfoComponent,
-    WallComponent
+    WallComponent,
+    FormsComponent,
+    TempDrivenComponent,
+    DataDrivenComponent
   ],
   imports: [
     BrowserModule,
