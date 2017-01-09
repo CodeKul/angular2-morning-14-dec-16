@@ -1,3 +1,77 @@
-<p>
-  data-driven works!
-</p>
+<div class="container">
+  <div class="row">
+    <h2>Create Your Simple Registration Form</h2>
+
+    <form class="form-horizontal" [formGroup]="rootFormGroup" (ngSubmit)="onSubmit()">
+      <fieldset>
+
+        <!-- Form Name -->
+        <legend>Register Here</legend>
+
+        <div formGroupName="nameGroup">
+          <!-- Text input-->
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="textinput">First Name</label>
+            <div class="col-md-4">
+              <input id="textinput" formControlName="firstName" placeholder="Insert your First Name" class="form-control input-md" type="text">
+              <span class="help-block"> </span>
+            </div>
+          </div>
+
+          <!-- Text input-->
+
+
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="textinput">Email</label>
+            <div class="col-md-4">
+              <input id="textinput" formControlName="email" placeholder="Insert your Email" class="form-control input-md" type="text">
+              <span class="help-block" *ngIf="!rootFormGroup.controls.nameGroup.controls.email.valid">Invalid Email</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Text input-->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="textinput">Last Name</label>
+          <div class="col-md-4">
+            <input id="textinput" formControlName="lastName" placeholder="Insert your Last Name" class="form-control input-md" type="text">
+            <span class="help-block"> </span>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="textinput">Mobile Type</label>
+          <div class="col-md-4" *ngFor="let mobile of mobiles">
+            <input [value]="mobile" id="textinput" formControlName="mobileType" type="radio"> {{mobile}}
+          </div>
+        </div>
+
+        <div class="form-group" formArrayName="nums">
+          <label class="col-md-4 control-label" for="textinput">Other Mobiles</label>
+          <div class="col-md-4" *ngFor="let num of rootFormGroup.controls.nums.value; let i = index;">
+            <input id="textinput" formControlName="{{i}}" class="form-control input-md" type="text">
+            <span class="help-block"> </span>
+          </div>
+        </div>
+
+         <div class="form-group">
+           <label class="col-md-4" for="textinput"></label>
+          <div class="col-md-4">
+            <button type="button" id="singlebutton" name="singlebutton" class="btn btn-primary" (click)="addOtherNum()">Add Another Number</button>
+          </div>
+        </div>
+
+        <!-- Button -->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="singlebutton"> </label>
+          <div class="col-md-4">
+            <button type="submit" id="singlebutton" name="singlebutton" class="btn btn-primary" [disabled]="!rootFormGroup.valid">Submit</button>
+          </div>
+        </div>
+
+      </fieldset>
+    </form>
+
+  </div>
+</div>

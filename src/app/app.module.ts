@@ -44,6 +44,7 @@ import { WallComponent } from './projectmod1/wall.component';
 import { FormsComponent } from './forms/forms.component';
 import { TempDrivenComponent } from './forms/temp-driven.component';
 import { DataDrivenComponent } from './forms/data-driven.component';
+import {ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -89,7 +90,8 @@ import { DataDrivenComponent } from './forms/data-driven.component';
     BrowserModule,
     FormsModule,
     HttpModule,
-    routeModule
+    routeModule,
+    ReactiveFormsModule
   ],
   providers: [FirstService,BridgeService,WallGuardService],
   bootstrap: [AppComponent]
