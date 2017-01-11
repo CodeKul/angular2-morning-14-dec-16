@@ -1,3 +1,4 @@
+import { Observable } from 'rxjs/Rx';
 import { Component, OnInit } from '@angular/core';
 import { Validator,FormBuilder, NgForm, FormGroup, Validators, FormArray, FormControl} from '@angular/forms'
 
@@ -40,12 +41,25 @@ export class DataDrivenComponent implements OnInit {
   }
 
   addOtherNum() {
-    (<FormArray>this.rootFormGroup.controls['nums']).push(new FormControl('',[Validators.required,this.mobileValidator]));
+    (<FormArray>this.rootFormGroup.controls['nums']).push(new FormControl('',[Validators.required],this.asyncValidatior));
   }
 
   mobileValidator(formControl : FormControl) : {[key : string] : boolean} {
     return formControl.value.length == 10 ? null : {
-      valid : true
+      invalid : true
     };    
+  }
+
+  asyncValidatior(formControl : FormControl)  : Observable<any> | Promise<any> {
+    // 2s
+
+    let promise = new Promise<any>((resolve, reject)=>{
+      setTimeout(()=> {
+        if(formControl.value === '10') resolve({invalid : true}) ;
+        else resolve(null);
+      },1500);
+    });
+
+    return promise;
   }
 }

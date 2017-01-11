@@ -45,6 +45,8 @@ import { FormsComponent } from './forms/forms.component';
 import { TempDrivenComponent } from './forms/temp-driven.component';
 import { DataDrivenComponent } from './forms/data-driven.component';
 import {ReactiveFormsModule} from '@angular/forms';
+import { PipesComponent } from './pipes/pipes.component';
+import { MyCurrPipe } from './pipes/my-curr.pipe';
 
 @NgModule({
   declarations: [
@@ -84,7 +86,9 @@ import {ReactiveFormsModule} from '@angular/forms';
     WallComponent,
     FormsComponent,
     TempDrivenComponent,
-    DataDrivenComponent
+    DataDrivenComponent,
+    PipesComponent,
+    MyCurrPipe
   ],
   imports: [
     BrowserModule,
