@@ -1,0 +1,39 @@
+<div class="container">
+  <div class="row">
+    <h1>Pipes</h1>
+    <hr>
+  </div>
+
+  <div class="row">
+    <p>MyName : {{myName}}</p>
+    <p>MyName(uppercase) : {{myName | uppercase }}</p>
+    <p>Date : {{myDate | date:"dd-MM-yyyy"}}</p>
+    <p> Slice : {{myName | slice:2:5 | uppercase}}</p>
+    <p> CTC : {{ctc | currency:"INR":"&#8377;"}}</p>
+  </div>
+
+  <div class="row">
+    <div class="col-md-8">
+      <input type="text" class="fullWidth" [(ngModel)]="myAmt">
+    </div>
+    <div class="col-md-4">
+      <input type="button" class="btn btn-primary" value="Okay">
+    </div>
+
+    {{myAmt | myCurr:'US' | currency:"INR":"&#8377;"}}
+  </div>
+
+  <div class="row">
+    <div class="col-md-8">
+      <input type="text" [(ngModel)]="filterWith">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <ul>
+        <li *ngFor="let curr of currencies | myFilter:filterWith">{{curr}}</li>
+      </ul>
+    </div>
+  </div>
+</div>

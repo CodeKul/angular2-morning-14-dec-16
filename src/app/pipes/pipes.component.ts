@@ -7,17 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PipesComponent implements OnInit {
 
-  myName = 'android';
-  myDate = new Date();
-  ctc = 15000;
-
-  currencies = [
-    'India',
-    'Chiana',
-    'Japan',
-    'Sri Lanka',
-    'America'
-  ];
+  
 
   constructor() { }
 

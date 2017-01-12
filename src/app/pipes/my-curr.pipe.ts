@@ -9,8 +9,8 @@ export class MyCurrPipe implements PipeTransform {
 
     console.log(`value is ${value} and args[0] is ${args}`);
     
-    if (args[0] == 'US') return value * 60;
-    if (args[0] == 'UK') return value * 80;
-    return value;
+    if (args === 'US') return parseInt(value) * 60;
+    if (args === 'UK') return parseInt(value) * 80;
+    return parseInt(value);
   }
 }

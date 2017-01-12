@@ -1,3 +1,5 @@
+import { OurPipeComponent } from './pipes/our-pipe.component';
+import { PipesComponent } from './pipes/pipes.component';
 import { DataDrivenComponent } from './forms/data-driven.component';
 import { TempDrivenComponent } from './forms/temp-driven.component';
 import { WallGuardService } from './projectmod1/wall-guard.service';
@@ -17,6 +19,7 @@ const CHILD_PROJ: Routes = [
 ];
 
 const ROUTING_PATH: Routes = [
+    {path : 'pipes', component : OurPipeComponent},
     {path:'templateDriven', component : TempDrivenComponent},
     {path:'dataDriven', component : DataDrivenComponent},
     { path: '', component: LoginrComponent },
