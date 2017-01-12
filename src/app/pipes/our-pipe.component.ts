@@ -21,6 +21,12 @@ export class OurPipeComponent implements OnInit {
     'America'
   ];
 
+  asyncPipe = new Promise(
+    (resolve, reject) => setTimeout( 
+        () =>  resolve('I am async'),1500
+    )  
+  );
+
   constructor() { }
 
   ngOnInit() { 
