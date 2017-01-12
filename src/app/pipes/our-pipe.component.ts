@@ -20,9 +20,19 @@ export class OurPipeComponent implements OnInit {
     'Sri Lanka',
     'America'
   ];
+
   constructor() { }
 
-  ngOnInit() {
+  ngOnInit() { 
+  }
+
+  pushCurr(curr) { // use such function to avoid pure false;
+    let temp = [];
+    this.currencies.forEach(curr => temp.push(curr));
+    temp.push(curr);
+
+    this.currencies = [];
+    temp.forEach(curr => this.currencies.push(curr));
   }
 
 }

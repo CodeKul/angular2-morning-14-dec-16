@@ -25,7 +25,10 @@
 
   <div class="row">
     <div class="col-md-8">
-      <input type="text" [(ngModel)]="filterWith">
+      <input type="text" [(ngModel)]="filterWith"> 
+    </div>
+    <div class="col-md-4">
+      <input type="button" class="btn btn-primary" value="Add" (click)="pushCurr(filterWith)">
     </div>
   </div>
 
