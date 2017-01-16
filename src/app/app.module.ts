@@ -1,3 +1,4 @@
+import { MyWebService } from './http/my-web.service';
 import { WallGuardService } from './projectmod1/wall-guard.service';
 import { routeModule } from './app.routing';
 import { BridgeService } from './servicecomp/bridge.service';
@@ -49,6 +50,7 @@ import { PipesComponent } from './pipes/pipes.component';
 import { MyCurrPipe } from './pipes/my-curr.pipe';
 import { OurPipeComponent } from './pipes/our-pipe.component';
 import { MyFilterPipe } from './pipes/my-filter.pipe';
+import { HttpComponent } from './http/http.component';
 
 @NgModule({
   declarations: [
@@ -92,7 +94,8 @@ import { MyFilterPipe } from './pipes/my-filter.pipe';
     PipesComponent,
     MyCurrPipe,
     OurPipeComponent,
-    MyFilterPipe
+    MyFilterPipe,
+    HttpComponent
 
   ],
   imports: [
@@ -102,7 +105,7 @@ import { MyFilterPipe } from './pipes/my-filter.pipe';
     routeModule,
     ReactiveFormsModule
   ],
-  providers: [FirstService,BridgeService,WallGuardService],
+  providers: [FirstService,BridgeService,WallGuardService,MyWebService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

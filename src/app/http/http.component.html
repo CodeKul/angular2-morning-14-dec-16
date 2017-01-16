@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h1> Web Services</h1>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-4">
+      <input type="button" value="Get" class="btn btn-primary" (click)="callGet()">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-4">
+      <input type="text" #userName/>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-4">
+      <input type="text" #password/>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-4">
+      <input type="button" (click)="callPost(userName.value, password.value)" value="post"/>
+    </div>
+  </div>
+
+</div>
