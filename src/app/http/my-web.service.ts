@@ -11,7 +11,7 @@ export class MyWebService {
   }
 
   getData() {
-    return this.http.get('https://angular-demo-d9927.firebaseio.com/apps/0.json');
+    return this.http.get('https://angular-demo-d9927.firebaseio.com/codeKulData.json');
   }
 
   postData(user : any) {
