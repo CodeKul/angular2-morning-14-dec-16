@@ -1,6 +1,6 @@
 import { Observable } from 'rxjs/Rx';
 import { Injectable } from '@angular/core';
-import { Http, Headers } from '@angular/http'
+import { Http, Headers, Response } from '@angular/http'
 
 @Injectable()
 export class MyWebService {
@@ -32,7 +32,7 @@ export class MyWebService {
     .catch(this.myErrHandler);
   }
 
-  checkUserName(userName) {
+  checkUserName(userName) : Observable<Response>{
     return this.http.get('https://angular-demo-d9927.firebaseio.com/codeKulData.json')
     .map(data => data.json())
     .map(users => {

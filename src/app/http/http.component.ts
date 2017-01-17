@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HttpComponent implements OnInit {
 
-  isUserValild = this.myHttp.checkUserName('android');
+  isUserValild = this.myHttp.checkUserName('android'); // check user name asynchrously 
   allUsers = [];
   constructor(
     private myHttp: MyWebService
