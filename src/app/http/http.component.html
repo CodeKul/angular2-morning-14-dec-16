@@ -7,7 +7,7 @@
 
   <div class="row">
     <div class="col-md-4">
-      <input type="button" value="Get" class="btn btn-primary" (click)="callGet()">
+      <input type="button" value="Get" class="btn btn-primary" (click)="callAllUsers()">
     </div>
   </div>
 
@@ -26,6 +26,14 @@
   <div class="row">
     <div class="col-md-4">
       <input type="button" (click)="callPost(userName.value, password.value)" value="post"/>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-4">
+      <ul>
+        <li *ngFor="let name of allUsers">{{name}}</li>
+      </ul>
     </div>
   </div>
 

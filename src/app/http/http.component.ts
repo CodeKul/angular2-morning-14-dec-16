@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HttpComponent implements OnInit {
 
+  allUsers  = [];
   constructor(
     private myHttp: MyWebService
   ) { }
@@ -17,10 +18,26 @@ export class HttpComponent implements OnInit {
   }
 
   callGet() {
-    this.myHttp.getData().subscribe(resData => console.log( resData.json()['test']));
+    console.log('Call called');
+    this.myHttp.getData()
+      .subscribe(resData => console.log(resData), err => console.log(err));
   }
 
-  callPost(userName, password){
-    this.myHttp.postData({userName : userName, password : password}).subscribe(data => console.log(data));
+  callPost(userName, password) {
+    this.myHttp.postData({ userName: userName, password: password })
+      .subscribe(data => console.log(data), err => console.log(err));
   }
+
+  callAllUsers() {
+    this.myHttp.getAllMyUsers()
+      .subscribe(users => {
+        console.log(users);
+        for(let key in users){
+          // console.log(users[key]['userName']);
+          this.allUsers.push(users[key]['userName']);
+        }
+      }, err => console.log(err));
+  }
+
+  
 }
