@@ -8,7 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HttpComponent implements OnInit {
 
-  allUsers  = [];
+  isUserValild = this.myHttp.checkUserName('android');
+  allUsers = [];
   constructor(
     private myHttp: MyWebService
   ) { }
@@ -32,12 +33,10 @@ export class HttpComponent implements OnInit {
     this.myHttp.getAllMyUsers()
       .subscribe(users => {
         console.log(users);
-        for(let key in users){
+        for (let key in users) {
           // console.log(users[key]['userName']);
           this.allUsers.push(users[key]['userName']);
         }
       }, err => console.log(err));
   }
-
-  
 }

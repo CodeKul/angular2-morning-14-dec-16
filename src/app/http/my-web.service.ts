@@ -5,12 +5,9 @@ import { Http, Headers } from '@angular/http'
 @Injectable()
 export class MyWebService {
 
-  
-
   constructor(
     private http: Http
   ) {
-
   }
 
   getData() {
@@ -32,6 +29,19 @@ export class MyWebService {
   getAllMyUsers() {
     return this.http.get('https://angular-demo-d9927.firebaseio.com/codeKulData.json')
     .map(data => data.json())
+    .catch(this.myErrHandler);
+  }
+
+  checkUserName(userName) {
+    return this.http.get('https://angular-demo-d9927.firebaseio.com/codeKulData.json')
+    .map(data => data.json())
+    .map(users => {
+      for (let key in users) {
+         if(userName === users[key]['userName']) return true;
+         else false;
+      }
+      return false;
+    })
     .catch(this.myErrHandler);
   }
 
