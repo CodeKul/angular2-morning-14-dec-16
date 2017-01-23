@@ -1,3 +1,7 @@
+import { DashComponent } from './auth/dash.component';
+import { RegiAuthComponent } from './auth/regi-auth.component';
+import { AppComponent } from './app.component';
+import { AuthComponent } from './auth/auth.component';
 import { OurPipeComponent } from './pipes/our-pipe.component';
 import { PipesComponent } from './pipes/pipes.component';
 import { DataDrivenComponent } from './forms/data-driven.component';
@@ -19,10 +23,13 @@ const CHILD_PROJ: Routes = [
 ];
 
 const ROUTING_PATH: Routes = [
+    { path: '', component:  AuthComponent },
+    { path: 'authRegi', component:  RegiAuthComponent },
+    { path: 'authDash', component:  DashComponent },
     {path : 'pipes', component : OurPipeComponent},
     {path:'templateDriven', component : TempDrivenComponent},
     {path:'dataDriven', component : DataDrivenComponent},
-    { path: '', component: LoginrComponent },
+   // { path: '', component: LoginrComponent },
     { path: 'proj/:userName', component: HeaderComponent, canActivate : [WallGuardService] },
     { path: 'proj/:userName', component: HeaderComponent, children: CHILD_PROJ },
     { path: 'register', component: RegisterrComponent },

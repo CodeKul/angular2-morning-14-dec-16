@@ -1,3 +1,4 @@
+import { AuthServiceService } from './auth/auth-service.service';
 import { MyWebService } from './http/my-web.service';
 import { WallGuardService } from './projectmod1/wall-guard.service';
 import { routeModule } from './app.routing';
@@ -51,6 +52,9 @@ import { MyCurrPipe } from './pipes/my-curr.pipe';
 import { OurPipeComponent } from './pipes/our-pipe.component';
 import { MyFilterPipe } from './pipes/my-filter.pipe';
 import { HttpComponent } from './http/http.component';
+import { AuthComponent } from './auth/auth.component';
+import { RegiAuthComponent } from './auth/regi-auth.component';
+import { DashComponent } from './auth/dash.component';
 
 @NgModule({
   declarations: [
@@ -95,8 +99,10 @@ import { HttpComponent } from './http/http.component';
     MyCurrPipe,
     OurPipeComponent,
     MyFilterPipe,
-    HttpComponent
-
+    HttpComponent,
+    AuthComponent,
+    RegiAuthComponent,
+    DashComponent
   ],
   imports: [
     BrowserModule,
@@ -105,7 +111,7 @@ import { HttpComponent } from './http/http.component';
     routeModule,
     ReactiveFormsModule
   ],
-  providers: [FirstService,BridgeService,WallGuardService,MyWebService],
+  providers: [FirstService,BridgeService,WallGuardService,MyWebService, AuthServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
